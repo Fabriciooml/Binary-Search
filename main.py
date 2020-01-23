@@ -2,7 +2,7 @@ def binarySearch(array, left, right, x):
     
     if(right >= left):
         
-        middle = left + (right - 1)/2
+        middle = left + int((right - 1)/2)
         
         if(array[middle] == x):
             return middle
@@ -14,3 +14,9 @@ def binarySearch(array, left, right, x):
             return binarySearch(array, middle+1, right, x)
     else:
         return -1
+
+array = [2, 3, 4, 10, 40]
+x = 10
+
+result = binarySearch(array, 0, len(array)-1, x)
+print(result)
